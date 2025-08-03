@@ -19,7 +19,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(51, 51, 51);
+        background-color: rgb(27, 26, 26);
       }
 
       .container {
@@ -114,6 +114,7 @@
     </div>
 
     <script type="text/javascript">
+      const list = [0, 1, 2];
       const questionsList = [
         "What weird food combinations do you really enjoy?",
         "What social stigma does society need to get over?",
@@ -619,11 +620,13 @@
       ];
 
       const question = document.getElementById("question");
-      question.textContent = questionsList[Math.floor(Math.random() * 502)];
+      question.textContent =
+        questionsList[Math.floor(Math.random() * questionsList.length)];
 
       const getRandomQuestion = () => {
         question.textContent = "";
-        question.textContent = questionsList[Math.floor(Math.random() * 502)];
+        question.textContent =
+          questionsList[Math.floor(Math.random() * questionsList.length)];
       };
     </script>
   </body>
